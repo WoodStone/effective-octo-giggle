@@ -1,6 +1,6 @@
 package no.vestein.eog;
 
-public class Reference {
+public final class Reference {
 
   private Reference() {}
 

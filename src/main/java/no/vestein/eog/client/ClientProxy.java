@@ -1,34 +1,30 @@
-package no.vestein.eog;
+package no.vestein.eog.client;
 
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import no.vestein.eog.common.CommonProxy;
 
-import static no.vestein.eog.Reference.*;
-
-@Mod(modid = MODID, version = VERSION)
-public class EffectiveOctoGiggle {
-
-  @SidedProxy(clientSide = "no.vestein.eog.client.ClientProxy", serverSide = "no.vestein.eog.common.CommonProxy")
-  public static CommonProxy commonProxy;
+public class ClientProxy extends CommonProxy {
 
   @EventHandler
+  @Override
   public void preInit(FMLPreInitializationEvent event) {
 
   }
 
   @EventHandler
+  @Override
   public void init(FMLInitializationEvent event) {
 
-    EnumEOGBlock.registerBlocks();
+    ItemRenderRegister.registerItemRenderer();
+    BlockRenderRegister.registerBlockRenderer();
 
   }
 
   @EventHandler
+  @Override
   public void postInit(FMLPostInitializationEvent event) {
 
   }
