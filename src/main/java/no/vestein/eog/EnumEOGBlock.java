@@ -21,7 +21,11 @@ public enum EnumEOGBlock {
   }
 
   private static void registerBlock(Block block) {
-    GameRegistry.registerBlock(block, block.getUnlocalizedName());
+    GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
+  }
+
+  public EOGBlock getBlock() {
+    return block;
   }
 
 }

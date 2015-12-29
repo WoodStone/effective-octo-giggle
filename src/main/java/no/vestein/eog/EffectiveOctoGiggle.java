@@ -26,6 +26,7 @@ public class EffectiveOctoGiggle {
 
     EnumEOGBlock.registerBlocks();
 
+    commonProxy.init(event);
   }
 
   @EventHandler
